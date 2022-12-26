@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
   res.send(" <h1>RWANDA REST API</h1>");
 });
 
-const usersRoute = require("./routes/users");
-app.use("/api/users/", usersRoute);
+const provencesRoute = require("./routes/provences");
+app.use("/api/provences/", provencesRoute);
 
 //404 route
 app.use("*", (req, res) => {
@@ -29,7 +29,7 @@ app.use("*", (req, res) => {
   });
 });
 
-const port = process.env.PORT || 801;
+const port = process.env.PORT || 8001;
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
